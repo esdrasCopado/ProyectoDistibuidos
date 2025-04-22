@@ -30,3 +30,4 @@ Este proyecto demuestra una arquitectura moderna de microservicios desacoplados,
 
 ## Diagrama de despliegue
 
+![Diagrama de despliegue](./diagramas/despliegue.png)
