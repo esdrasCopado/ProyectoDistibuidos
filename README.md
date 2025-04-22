@@ -24,3 +24,7 @@ Este proyecto demuestra una arquitectura moderna de microservicios desacoplados,
      |
      v
 [Microservicio Registro Usuario] ---> [Redis Streams] ---> [Microservicio Notificaciones]
+
+```
+
+## Diagrama de despliegue
