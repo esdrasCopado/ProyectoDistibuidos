@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🧩 Microservicios con Redis Streams y API Gateway con NGINX
 
 Este proyecto demuestra una arquitectura moderna de microservicios desacoplados, donde los servicios se comunican mediante eventos a través de **Redis Streams**. Todo el sistema está orquestado con **Docker Compose**, y expuesto mediante un **API Gateway implementado con NGINX**.
@@ -28,3 +29,4 @@ Este proyecto demuestra una arquitectura moderna de microservicios desacoplados,
 ```
 
 ## Diagrama de despliegue
+
