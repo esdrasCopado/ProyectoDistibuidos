@@ -9,13 +9,59 @@ services:
     networks:
       - backend
 
+  postgres-registro:
+    image: postgres:15
+    container_name: postgres-registro
+    environment:
+      POSTGRES_USER: usuario
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: registrodb
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata-registro:/var/lib/postgresql/data
+    networks:
+      - backend
+
   registro-usuario:
     build: ./registro-usuario
     container_name: registro-usuario
-    ports:
-      - "3001:3001"
     depends_on:
-      - redis
+      - postgres-registro
+    environment:
+      DB_HOST: postgres-registro
+      DB_PORT: 5432
+      DB_USER: usuario
+      DB_PASSWORD: password
+      DB_NAME: registrodb
+    networks:
+      - backend
+
+  postgres-autenticacion:
+    image: postgres:15
+    container_name: postgres-autenticacion
+    environment:
+      POSTGRES_USER: usuario
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: registrodb
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata-autenticacion:/var/lib/postgresql/data
+    networks:
+      - backend
+
+  autenticacion:
+    build: ./autenticacion
+    container_name: autenticacion
+    depends_on:
+      - postgres-autenticacion
+    environment:
+      DB_HOST: postgres-autenticacion
+      DB_PORT: 5432
+      DB_USER: usuario
+      DB_PASSWORD: password
+      DB_NAME: registrodb
     networks:
       - backend
 
@@ -26,7 +72,7 @@ services:
       - redis
     networks:
       - backend
-    
+
   nginx:
     image: nginx:latest
     container_name: nginx-gateway
@@ -39,8 +85,12 @@ services:
     networks:
       - backend
 
-
 networks:
   backend:
+
+volumes:
+  pgdata-registro:
+  pgdata-autenticacion:
+
 
 

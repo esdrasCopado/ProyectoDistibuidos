@@ -8,7 +8,7 @@ const redis = new Redis({
 async function procesarEventos() {
   console.log('Esperando eventos de Redis Stream...');
 
-  let lastId = '0'; // desde el principio
+  let lastId = '$'; // se resetea el ID para leer desde el último evento
 
   while (true) {
     const result = await redis.xread('BLOCK', 0, 'STREAMS', 'eventos', lastId);
