@@ -1,11 +1,11 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.2.2 Chrome/134.0.6998.178 Electron/35.1.2 Safari/537.36" version="26.2.2">
   <diagram name="Página-1" id="MRVZ4gZMsEhP-mlYecWs">
-    <mxGraphModel dx="2396" dy="919" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2561" dy="1016" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="-pYQC9JN-asUfWVGHoNV-31" value="Cluster Servicios Salud" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="150" y="180" width="955" height="1420" as="geometry" />
+          <mxGeometry x="150" y="230" width="955" height="1420" as="geometry" />
         </mxCell>
         <mxCell id="-pYQC9JN-asUfWVGHoNV-22" value="" style="group" vertex="1" connectable="0" parent="1">
           <mxGeometry x="330" y="1490" width="220" height="160" as="geometry" />
@@ -67,7 +67,7 @@
         <mxCell id="-pYQC9JN-asUfWVGHoNV-4" value="Contenedor" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;whiteSpace=wrap;" vertex="1" parent="-pYQC9JN-asUfWVGHoNV-27">
           <mxGeometry width="220" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="-pYQC9JN-asUfWVGHoNV-5" value="&amp;lt;&amp;lt;Artefact&amp;gt;&amp;gt;&lt;div&gt;&lt;b&gt;Servicio Autenticacion Biometrica&lt;/b&gt;&lt;/div&gt;" style="html=1;whiteSpace=wrap;" vertex="1" parent="-pYQC9JN-asUfWVGHoNV-27">
+        <mxCell id="-pYQC9JN-asUfWVGHoNV-5" value="&amp;lt;&amp;lt;Artefact&amp;gt;&amp;gt;&lt;div&gt;&lt;b&gt;Servicio Autenticacion&amp;nbsp;&lt;/b&gt;&lt;/div&gt;" style="html=1;whiteSpace=wrap;" vertex="1" parent="-pYQC9JN-asUfWVGHoNV-27">
           <mxGeometry x="59" y="35" width="110" height="50" as="geometry" />
         </mxCell>
         <mxCell id="-pYQC9JN-asUfWVGHoNV-6" value="&amp;lt;&amp;lt;Artefact&amp;gt;&amp;gt;&lt;div&gt;&lt;b&gt;Base de datos&lt;/b&gt;&lt;/div&gt;" style="html=1;whiteSpace=wrap;" vertex="1" parent="-pYQC9JN-asUfWVGHoNV-27">

@@ -7,11 +7,13 @@ Este proyecto demuestra una arquitectura moderna de microservicios desacoplados,
 
 ## 🚀 Características principales
 
-- ✅ Microservicio de **Registro de Usuarios**
-- ✅ Microservicio de **Notificaciones** (basado en eventos)
-- ✅ Comunicación mediante **Redis Streams**
-- ✅ **API Gateway** con NGINX como entrada única
-- ✅ Desplegado totalmente con Docker Compose
+- ✅ Microservicio de **Registro de Usuarios** con PostgreSQL
+- ✅ Microservicio de **Autenticación con JWT**
+- ✅ Microservicio de **Notificaciones** (consume eventos de Redis Streams)
+- ✅ Comunicación entre microservicios vía **Redis Streams**
+- ✅ **API Gateway** con NGINX como punto de entrada
+- ✅ Contenedores independientes con **bases de datos separadas**
+- ✅ Despliegue completo con **Docker Compose**
 
 ---
 
@@ -23,9 +25,15 @@ Este proyecto demuestra una arquitectura moderna de microservicios desacoplados,
      v
 [API Gateway - NGINX]
      |
-     v
-[Microservicio Registro Usuario] ---> [Redis Streams] ---> [Microservicio Notificaciones]
+     +--> /registro  -> [Microservicio Registro Usuario]
+     |                   |
+     |                   +--> Emite evento → [Redis Streams]
+     |                                           |
+     +-------------------------------------------+
+                                                 v
+                                        [Microservicio Notificaciones]
 
+     +--> /login     -> [Microservicio Autenticación]
 ```
 
 ## Diagrama de despliegue
