@@ -64,6 +64,28 @@ services:
       DB_NAME: registrodb
     networks:
       - backend
+  
+  control-permisos:
+    build: ./control-permisos
+    container_name: control-permisos
+    depends_on:
+      - redis
+    networks:
+      - backend
+
+  expediente-clinico:
+    build: ./expediente-clinico
+    container_name: expediente-clinico
+    depends_on:
+      - redis
+      - control-permisos
+    ports:
+      - "3003:3003"
+    environment:
+      REDIS_HOST: redis
+    networks:
+      - backend
+
 
   notificaciones:
     build: ./notificaciones
